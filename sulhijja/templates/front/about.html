@@ -1,0 +1,35 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="wrapper">
+    <div class="profile-content section">
+      <div class="container">
+        <div class="row">
+          <div class="profile-picture">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+                <br><br>
+              <div class="fileinput-new img-no-padding">
+                <img src="{% static 'spons.jpg '%}" alt="...">
+              </div>
+              <div class="name">
+                <h4 class="title text-center">S-U-L-H-I-J-JA<br /><small>Mahasiswa Prodi TI 2019</small></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-6 ml-auto mr-auto text-center">
+            <p> Blog ini merupakan tempat untuk membuat atau mempublis berita dengan kategory Otomotif, Sport Food <br> <h4>Punya Berita Yang Menarik Mari Posting Berita Anda Sekarang Secara Gratis</h4>  </p>
+  
+            <br>
+            <a class="btn btn-sm " href="{% url 'tambah_artikel' %}">+artikel</a> &ensp; &ensp; &ensp;
+            <!-- <button class="btn btn-outline-default btn-round"> Create Artikel</button> -->
+          </div> -->
+        </div>
+        <br /> 
+      </div>
+    </div>
+  </div>
+{% endblock content %}

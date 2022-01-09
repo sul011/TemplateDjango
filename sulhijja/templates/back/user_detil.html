@@ -1,0 +1,79 @@
+{% extends 'back/base.html' %}
+
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+           
+            <div class="col-md-12">
+                <div class="card">
+                    <form class="form-horizontal" method="POST">
+                        {% csrf_token %}
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                {{title}}
+                            </h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Username :</label>
+                                <div class="col-md-9">
+                                    {{user_info.username}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">FirstName :</label>
+                                <div class="col-md-9">
+                                    {{user_info.first_name}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">LastName :</label>
+                                <div class="col-md-9">
+                                    {{user_info.last_name}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Email :</label>
+                                <div class="col-md-9">
+                                   {{user_info.email}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Alamat :</label>
+                                <div class="col-md-9">
+                                   {{datadiri.alamat}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Telpon :</label>
+                                <div class="col-md-9">
+                                   {{datadiri.telp}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Is Active :</label>
+                                <div class="col-md-9">
+                                   {{user_info.is_active}}
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="card-footer text-right">
+                            <div class="form-group">
+                                <label class="col-md-3"></label>
+                                <div class="col-md-9">
+                                    <a class="btn btn-fill btn-info" href="{% url 'tabel_user' %}">back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- end card -->
+            </div> <!--  end col-md-6  -->
+        </div> <!-- end row -->
+    </div>
+
+    
+</div>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: lintangajipangestu
+
+    command: gunicorn myproject.wsgi:application --bind 0.0.0.0:9002
+
+    volumes:
+      - .:/app
+    ports:
+      - "9002:9002"
